@@ -3,7 +3,7 @@ import Book from './ui/Book.jsx';
 import { books } from '../data.js'
 
 const Featured = () => {
-    console.log(books);
+    // console.log(books);
     console.log();
     return (
         <section id="features">
