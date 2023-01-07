@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Books from './pages/Books.jsx';
+import { books } from "./data";
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     <div className="app">
       <Nav />
       <Route path="/" exact component={Home} />
-      <Route path="/books" exact component={Books} />
+      <Route path="/books"  render={() =><Books books={books}/>} />
       <Footer />
     </div>
     </Router>
