@@ -26,7 +26,7 @@ const Nav = () => {
                         </Link>
                     </li>
                     <li className='nav__list'>
-                        <Link to="/books" className='nav__link nav__link--primary'>
+                        <Link to="/books" className='nav__link'>
                             Books
                         </Link>
                     </li>

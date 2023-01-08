@@ -10,7 +10,7 @@ const Explore = () => {
                     </h2>
                     <a href="/books">
                         <button className="btn">Explore books</button>
-                    </a>
+                        </a>
                 </div>
             </div>
         </section>
