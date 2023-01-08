@@ -13,6 +13,7 @@ const Home = () => {
         <Featured />
         <Discounted />
         <Explore />
+
         </>
     )
 }
