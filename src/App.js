@@ -16,13 +16,27 @@ function App() {
   const [cart,setCart] = useState([]);
 
   function addToCart(book) {
-    const dupItem = cart.find(item => +item.id === +book.id)
-    if(dupItem) {
-      dupItem.quantity += 1; 
+    const dupeItem = cart.find(item => +item.id === +book.id)
+    if(dupeItem) {
+      dupeItem.quantity += 1; 
+      setCart(cart.map(item => {
+        if(item.id === dupeItem.id) {
+          return{
+            ...item,
+            quantity: item.quantity + 1,
+          }
+        }
+        else{
+          return item
+        }
+      }))
 
     }
-    console.log(dupItem)
-    setCart([...cart, {...book, quantity:1}])
+    else {
+      setCart([...cart,{...book, quantity: 1}])
+    }
+    // console.log(dupeItem)
+    // setCart([...cart, {...book, quantity:1}])
 
   }
 
