@@ -16,6 +16,12 @@ function App() {
   const [cart,setCart] = useState([]);
 
   function addToCart(book) {
+    const dupItem = cart.find(item => +item.id === +book.id)
+    if(dupItem) {
+      dupItem.quantity += 1; 
+
+    }
+    console.log(dupItem)
     setCart([...cart, {...book, quantity:1}])
 
   }
